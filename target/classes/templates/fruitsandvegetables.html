@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Страница фруктов и овощей</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    .hero-section {
+        background-image: url('fruitsAndVegetables.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-text {
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        text-align: center;
+    }
+
+    .produce-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 40px;
+    }
+
+    .produce-card {
+        width: 300px;
+        margin: 20px;
+        background-color: #f1f1f1;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+    }
+
+    .produce-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .produce-card .produce-info {
+        padding: 20px;
+    }
+
+    .produce-card .produce-info h3 {
+        margin-top: 0;
+    }
+
+    .produce-card .produce-info p {
+        margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/home">Страница фруктов и овощей</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<div class="hero-section">
+  <div class="hero-text">
+    <h1>Добро пожаловать на страницу фруктов и овощей</h1>
+    <p>Исследуйте наш широкий выбор свежих и полезных продуктов</p>
+  </div>
+</div>
+
+<div class="produce-container">
+  <div class="row">
+    <!-- Первый ряд с 4 контейнерами -->
+    <div class="col-md-3 mb-4">
+      <div class="produce-card">
+        <img src="vegetable1.jpg" alt="Изображение продукта">
+        <div class="produce-info">
+          <h3>Огурцы</h3>
+          <p>Незаменимый ингредиент для приготовления салатов, закусок и бутербродов. </p>
+          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="produce-card">
+        <img src="vegetable2.jpg" alt="Изображение продукта">
+        <div class="produce-info">
+          <h3>Помидоры</h3>
+          <p>Ароматный помидор является универсальным овощем, который легко сочетается с различными продуктами.</p>
+          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="produce-card">
+        <img src="vegetable3.jpg" alt="Изображение продукта">
+        <div class="produce-info">
+          <h3>Салатная Смесь</h3>
+          <p>Идеальная основа для приготовления легких, полезных салатов.</p>
+          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="produce-card">
+        <img src="fruit1.jpeg" alt="Изображение продукта">
+        <div class="produce-info">
+          <h3>Яблоки</h3>
+          <p>Источник витаминов, клетчатки и антиоксидантов.</p>
+          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Второй ряд с 4 контейнерами -->
+    <div class="col-md-3 mb-4">
+      <div class="produce-card">
+        <img src="fruit2.jpg" alt="Изображение продукта">
+        <div class="produce-info">
+          <h3>Груши</h3>
+          <p>Сладкий и ароматный фрукт, богатый витаминами и минералами.</p>
+          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="produce-card">
+        <img src="fruit3.jpg" alt="Изображение продукта">
+        <div class="produce-info">
+          <h3>Бананы</h3>
+          <p>Питательный и полезный фрукт, содержащий калий, клетчатку, витамины и минералы.</p>
+          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="produce-card">
+        <img src="fruit4.jpg" alt="Изображение продукта">
+        <div class="produce-info">
+          <h3>Виноград</h3>
+          <p>Источник витаминов, антиоксидантов и фруктовой кислоты. </p>
+          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="produce-card">
+        <img src="fruit5.jpg" alt="Изображение продукта">
+        <div class="produce-info">
+          <h3>Голубика</h3>
+          <p>Ягода, богатая витаминами, минералами и антиоксидантами. </p>
+          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
