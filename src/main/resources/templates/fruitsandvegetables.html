@@ -64,7 +64,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/home">Страница фруктов и овощей</a>
+    <a class="navbar-brand" href="/home">Вернуться на начальную страницу</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -79,95 +79,145 @@
 </div>
 
 <div class="produce-container">
-  <div class="row">
-    <!-- Первый ряд с 4 контейнерами -->
-    <div class="col-md-3 mb-4">
-      <div class="produce-card">
-        <img src="vegetable1.jpg" alt="Изображение продукта">
-        <div class="produce-info">
-          <h3>Огурцы</h3>
-          <p>Незаменимый ингредиент для приготовления салатов, закусок и бутербродов. </p>
-          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+    <div class="row">
+        <!-- Первый ряд с 4 контейнерами -->
+        <div class="col-md-3 mb-4">
+            <div class="produce-card">
+                <img src="vegetable1.jpg" alt="Изображение продукта">
+                <div class="produce-info">
+                    <h3>Огурцы 1.99$</h3>
+                    <p>Незаменимый ингредиент для приготовления салатов, закусок и бутербродов.</p>
+                    <form action="/fruitsandvegetables/addToCart" method="post">
+                        <input type="hidden" name="productName" value="Огурцы">
+                        <input type="hidden" name="productPrice" value="1.99">
+                        <input type="hidden" name="productImage" value="vegetable1.jpg">
+                        <input type="hidden" name="userEmail" value="example@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="col-md-3 mb-4">
-      <div class="produce-card">
-        <img src="vegetable2.jpg" alt="Изображение продукта">
-        <div class="produce-info">
-          <h3>Помидоры</h3>
-          <p>Ароматный помидор является универсальным овощем, который легко сочетается с различными продуктами.</p>
-          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+        <div class="col-md-3 mb-4">
+            <div class="produce-card">
+                <img src="vegetable2.jpg" alt="Изображение продукта">
+                <div class="produce-info">
+                    <h3>Помидоры 2.49$</h3>
+                    <p>Ароматный помидор является универсальным овощем, который легко сочетается с различными продуктами.</p>
+                    <form action="/fruitsandvegetables/addToCart" method="post">
+                        <input type="hidden" name="productName" value="Помидоры">
+                        <input type="hidden" name="productPrice" value="2.49">
+                        <input type="hidden" name="productImage" value="vegetable2.jpg">
+                        <input type="hidden" name="userEmail" value="example@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="col-md-3 mb-4">
-      <div class="produce-card">
-        <img src="vegetable3.jpg" alt="Изображение продукта">
-        <div class="produce-info">
-          <h3>Салатная Смесь</h3>
-          <p>Идеальная основа для приготовления легких, полезных салатов.</p>
-          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+        <div class="col-md-3 mb-4">
+            <div class="produce-card">
+                <img src="vegetable3.jpg" alt="Изображение продукта">
+                <div class="produce-info">
+                    <h3>Салатная Смесь 3.99$</h3>
+                    <p>Идеальная основа для приготовления легких, полезных салатов.</p>
+                    <form action="/fruitsandvegetables/addToCart" method="post">
+                        <input type="hidden" name="productName" value="Салатная Смесь">
+                        <input type="hidden" name="productPrice" value="3.99">
+                        <input type="hidden" name="productImage" value="vegetable3.jpg">
+                        <input type="hidden" name="userEmail" value="example@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="col-md-3 mb-4">
-      <div class="produce-card">
-        <img src="fruit1.jpeg" alt="Изображение продукта">
-        <div class="produce-info">
-          <h3>Яблоки</h3>
-          <p>Источник витаминов, клетчатки и антиоксидантов.</p>
-          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="col-md-3 mb-4">
+            <div class="produce-card">
+                <img src="fruit1.jpeg" alt="Изображение продукта">
+                <div class="produce-info">
+                    <h3>Яблоки 2.99$</h3>
+                    <p>Источник витаминов, клетчатки и антиоксидантов.</p>
+                    <form action="/fruitsandvegetables/addToCart" method="post">
+                        <input type="hidden" name="productName" value="Яблоки">
+                        <input type="hidden" name="productPrice" value="2.99">
+                        <input type="hidden" name="productImage" value="fruit1.jpeg">
 
-  <div class="row">
-    <!-- Второй ряд с 4 контейнерами -->
-    <div class="col-md-3 mb-4">
-      <div class="produce-card">
-        <img src="fruit2.jpg" alt="Изображение продукта">
-        <div class="produce-info">
-          <h3>Груши</h3>
-          <p>Сладкий и ароматный фрукт, богатый витаминами и минералами.</p>
-          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                        <input type="hidden" name="userEmail" value="example@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="col-md-3 mb-4">
-      <div class="produce-card">
-        <img src="fruit3.jpg" alt="Изображение продукта">
-        <div class="produce-info">
-          <h3>Бананы</h3>
-          <p>Питательный и полезный фрукт, содержащий калий, клетчатку, витамины и минералы.</p>
-          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 mb-4">
-      <div class="produce-card">
-        <img src="fruit4.jpg" alt="Изображение продукта">
-        <div class="produce-info">
-          <h3>Виноград</h3>
-          <p>Источник витаминов, антиоксидантов и фруктовой кислоты. </p>
-          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 mb-4">
-      <div class="produce-card">
-        <img src="fruit5.jpg" alt="Изображение продукта">
-        <div class="produce-info">
-          <h3>Голубика</h3>
-          <p>Ягода, богатая витаминами, минералами и антиоксидантами. </p>
-          <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <div class="row">
+        <!-- Второй ряд с 4 контейнерами -->
+        <div class="col-md-3 mb-4">
+            <div class="produce-card">
+                <img src="fruit2.jpg" alt="Изображение продукта">
+                <div class="produce-info">
+                    <h3>Груши 2.79$</h3>
+                    <p>Сладкий и ароматный фрукт, богатый витаминами и минералами.</p>
+                    <form action="/fruitsandvegetables/addToCart" method="post">
+                        <input type="hidden" name="productName" value="Груши">
+                        <input type="hidden" name="productPrice" value="2.79">
+                        <input type="hidden" name="productImage" value="fruit2.jpg">
+                        <input type="hidden" name="userEmail" value="example@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="produce-card">
+                <img src="fruit3.jpg" alt="Изображение продукта">
+                <div class="produce-info">
+                    <h3>Бананы 1.99$</h3>
+                    <p>Питательный и полезный фрукт, содержащий калий, клетчатку, витамины и минералы.</p>
+                    <form action="/fruitsandvegetables/addToCart" method="post">
+                        <input type="hidden" name="productName" value="Бананы">
+                        <input type="hidden" name="productPrice" value="1.99">
+                        <input type="hidden" name="productImage" value="fruit3.jpg">
+                        <input type="hidden" name="userEmail" value="example@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="produce-card">
+                <img src="fruit4.jpg" alt="Изображение продукта">
+                <div class="produce-info">
+                    <h3>Виноград 3.49$</h3>
+                    <p>Источник витаминов, антиоксидантов и фруктовой кислоты.</p>
+                    <form action="/fruitsandvegetables/addToCart" method="post">
+                        <input type="hidden" name="productName" value="Виноград">
+                        <input type="hidden" name="productPrice" value="3.49">
+                        <input type="hidden" name="productImage" value="fruit4.jpg">
+                        <input type="hidden" name="userEmail" value="example@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="produce-card">
+                <img src="fruit5.jpg" alt="Изображение продукта">
+                <div class="produce-info">
+                    <h3>Голубика 4.99$</h3>
+                    <p>Ягода, богатая витаминами, минералами и антиоксидантами.</p>
+                    <form action="/fruitsandvegetables/addToCart" method="post">
+                        <input type="hidden" name="productName" value="Голубика">
+                        <input type="hidden" name="productPrice" value="4.99">
+                        <input type="hidden" name="productImage" value="fruit5.jpg">
+                        <input type="hidden" name="userEmail" value="example@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

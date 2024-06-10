@@ -64,7 +64,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/home">Страница Мясных Изделий</a>
+        <a class="navbar-brand" href="/home">Вернуться на начальную страницу</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -73,21 +73,27 @@
 
 <div class="hero-section">
     <div class="hero-text">
-        <h1>Добро пожаловать на страницу напитков</h1>
-        <p>Исследуйте наш широкий выбор напитков</p>
+        <h1>Добро пожаловать на страницу мясных изделий</h1>
+        <p>Исследуйте наш широкий выбор</p>
     </div>
 </div>
 
-<div class="drinks-container">
+<div class="container drinks-container">
     <div class="row">
         <!-- Первый ряд с 4 контейнерами -->
         <div class="col-md-3 mb-4">
             <div class="drink-card">
                 <img src="Kolbasa_kopch.jpg" alt="Изображение напитка">
                 <div class="drink-info">
-                    <h3>Колбаса Копченая</h3>
+                    <h3>Колбаса Копченая 9.99$</h3>
                     <p>Ароматная, насыщенная копченая колбаса - отличный источник белка.</p>
-                    <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    <form th:action="@{/meatproduct/addToCart}" method="post">
+                        <input type="hidden" name="productName" value="Колбаса Копченая">
+                        <input type="hidden" name="productPrice" value="9.99">
+                        <input type="hidden" name="productImage" value="Kolbasa_kopch.jpg">
+                        <input type="hidden" name="userEmail" value="user@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -95,9 +101,15 @@
             <div class="drink-card">
                 <img src="Kolbasa_doct.jpg" alt="Изображение напитка">
                 <div class="drink-info">
-                    <h3>Колбаса Докторская</h3>
-                    <p>Классическая докторская колбаса - деликатесный продукт с мягким, сбалансированным вкусом. </p>
-                    <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    <h3>Колбаса Докторская 12.99$</h3>
+                    <p>Классическая докторская колбаса - деликатесный продукт с мягким, сбалансированным вкусом.</p>
+                    <form th:action="@{/meatproduct/addToCart}" method="post">
+                        <input type="hidden" name="productName" value="Колбаса Докторская">
+                        <input type="hidden" name="productPrice" value="12.99">
+                        <input type="hidden" name="productImage" value="Kolbasa_doct.jpg">
+                        <input type="hidden" name="userEmail" value="user@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -105,9 +117,15 @@
             <div class="drink-card">
                 <img src="Sosiski.jpg" alt="Изображение напитка">
                 <div class="drink-info">
-                    <h3>Сосиски</h3>
+                    <h3>Сосиски 7.99$</h3>
                     <p>Классические сочные сосиски - отличный вариант быстрого и вкусного перекуса.</p>
-                    <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    <form th:action="@{/meatproduct/addToCart}" method="post">
+                        <input type="hidden" name="productName" value="Сосиски">
+                        <input type="hidden" name="productPrice" value="7.99">
+                        <input type="hidden" name="productImage" value="Sosiski.jpg">
+                        <input type="hidden" name="userEmail" value="user@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -115,9 +133,15 @@
             <div class="drink-card">
                 <img src="Sardelki.jpg" alt="Изображение напитка">
                 <div class="drink-info">
-                    <h3>Сардельки</h3>
+                    <h3>Сардельки 8.99$</h3>
                     <p>Аппетитные, сочные сардельки - небольшие колбаски с ярко-выраженным мясным вкусом.</p>
-                    <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    <form th:action="@{/meatproduct/addToCart}" method="post">
+                        <input type="hidden" name="productName" value="Сардельки">
+                        <input type="hidden" name="productPrice" value="8.99">
+                        <input type="hidden" name="productImage" value="Sardelki.jpg">
+                        <input type="hidden" name="userEmail" value="user@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -129,15 +153,24 @@
             <div class="drink-card">
                 <img src="Farsh.jpg" alt="Изображение напитка">
                 <div class="drink-info">
-                    <h3>Фарш</h3>
+                    <h3>Фарш 5.99$</h3>
                     <p>Универсальный мясной фарш - основа для множества блюд.</p>
-                    <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    <form th:action="@{/meatproduct/addToCart}" method="post">
+                        <input type="hidden" name="productName" value="Фарш">
+                        <input type="hidden" name="productPrice" value="5.99">
+
+                        <input type="hidden" name="productImage" value="Farsh.jpg">
+                        <input type="hidden" name="userEmail" value="user@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 </html>

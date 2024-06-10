@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Страница кисломолочных продуктов</title>
@@ -64,8 +64,9 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/home">Страница кисломолочных продуктов</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="/home">Вернуться на начальную страницу</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
@@ -78,98 +79,78 @@
     </div>
 </div>
 
-<div class="products-container">
+<div class="container drinks-container">
     <div class="row">
         <!-- Первый ряд с 4 контейнерами -->
         <div class="col-md-3 mb-4">
-            <div class="product-card">
-                <img src="Milk.jpg" alt="Изображение продукта">
-                <div class="product-info">
-                    <h3>Молоко</h3>
-                    <p>Превосходное молоко прямо из фермы к вам домой! </p>
-                    <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+            <div class="drink-card">
+                <img src="Milk.jpg" alt="Изображение напитка">
+                <div class="drink-info">
+                    <h3>Молоко 1.99$</h3>
+                    <p>Превосходное молоко прямо из фермы к вам домой!</p>
+                    <form th:action="@{/dairyproduct/addToCart}" method="post">
+                        <input type="hidden" name="productName" value="Молоко">
+                        <input type="hidden" name="productPrice" value="1.99">
+
+                        <input type="hidden" name="productImage" value="drink1.jpg">
+                        <input type="hidden" name="userEmail" value="user@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
                 </div>
             </div>
         </div>
         <div class="col-md-3 mb-4">
-            <div class="product-card">
-                <img src="Kefir.jpg" alt="Изображение продукта">
-                <div class="product-info">
-                    <h3>Кефир</h3>
-                    <p>Кефир - натуральный продукт, обогащенный полезными бактериями и микроэлементами. </p>
-                    <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+            <div class="drink-card">
+                <img src="Kefir.jpg" alt="Изображение напитка">
+                <div class="drink-info">
+                    <h3>Кефир 2.00$</h3>
+                    <p>Кефир - натуральный продукт, обогащенный полезными бактериями</p>
+                    <form th:action="@{/dairyproduct/addToCart}" method="post">
+                        <input type="hidden" name="productName" value="Кефир">
+                        <input type="hidden" name="productPrice" value="2.00">
+                        <input type="hidden" name="productImage" value="drink2.jpg">
+                        <input type="hidden" name="userEmail" value="user@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
                 </div>
             </div>
         </div>
         <div class="col-md-3 mb-4">
-            <div class="product-card">
-                <img src="Smetana.jpg" alt="Изображение продукта">
-                <div class="product-info">
-                    <h3>Сметана</h3>
+            <div class="drink-card">
+                <img src="Smetana.jpg" alt="Изображение напитка">
+                <div class="drink-info">
+                    <h3>Сметана 1.99$</h3>
                     <p>Натуральный кисломолочный продукт с нежной, мягкой текстурой.</p>
-                    <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    <form th:action="@{/dairyproduct/addToCart}" method="post">
+                        <input type="hidden" name="productName" value="Cметана">
+                        <input type="hidden" name="productPrice" value="1.99">
+                        <input type="hidden" name="productImage" value="drink3.jpg">
+                        <input type="hidden" name="userEmail" value="user@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
                 </div>
             </div>
         </div>
         <div class="col-md-3 mb-4">
-            <div class="product-card">
-                <img src="Airan.jpg" alt="Изображение продукта">
-                <div class="product-info">
-                    <h3>Айран</h3>
+            <div class="drink-card">
+                <img src="drink4.jpg" alt="Изображение напитка">
+                <div class="drink-info">
+                    <h3>Айран 1.99$</h3>
                     <p>Традиционный кисломолочный напиток, популярный на Ближнем Востоке и в Средней Азии.</p>
-                    <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    <form th:action="@{/dairyproduct/addToCart}" method="post">
+                        <input type="hidden" name="productName" value="Айран">
+                        <input type="hidden" name="productPrice" value="1.99">
+                        <input type="hidden" name="productImage" value="drink4.jpg">
+                        <input type="hidden" name="userEmail" value="user@example.com">
+                        <button type="submit" class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <!-- Второй ряд с 4 контейнерами -->
-        <div class="col-md-3 mb-4">
-            <div class="product-card">
-                <img src="Ice-cream.jpg" alt="Изображение продукта">
-                <div class="product-info">
-                    <h3>Мороженое</h3>
-                    <p>Охлажденный десерт,сделан из охлажденной смеси молока,
-                        сливок, сахара и других ингредиентов.</p>
-                    <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-4">
-            <div class="product-card">
-                <img src="Sgushenka.jpg" alt="Изображение продукта">
-                <div class="product-info">
-                    <h3>Сгущенка</h3>
-                    <p>Кремообразный продукт, получаемый путем уваривания цельного
-                        пастеризованного молока с добавлением сахара.</p>
-                    <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-4">
-            <div class="product-card">
-                <img src="Sliv-Cheese.jpg" alt="Изображение продукта">
-                <div class="product-info">
-                    <h3>Сливочный Сыр</h3>
-                    <p>Мягкий, нежный и богатый на вкус молочный продукт.</p>
-                    <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-4">
-            <div class="product-card">
-                <img src="Tvor-Cheese.jpg" alt="Изображение продукта">
-                <div class="product-info">
-                    <h3>Творожный Сыр</h3>
-                    <p>Мягкий, нежный и сливочный молочный продукт, приготовленный из натурального творога.</p>
-                    <button class="btn btn-primary btn-add-to-cart">Добавить в корзину</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 </html>
